@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Background Animation</title>
+        <meta charset="utf-8">
+       <style>
+           *{padding: 0;margin: 0}
+.welcome{position:relative;height:100vh;overflow: hidden;font-family:cursive;)}
+h1{color:black;position:absolute;top:50%;left: 50%;transform: translate(-50%,-50%);font-size: 70px;z-index: 1;}
+ul li{position: absolute;border: 1px solid white;width:30px;height:30px;list-style: none;opacity: 0;
+background-color: black;}
+.square li{top: 45vh;left: 50vw;animation: square 10s linear infinite;opacity: 0;}
+.square li:nth-child(2){top:80vh;left: 10vw;animation-delay: 2s;}
+.square li:nth-child(3){top:80vh;left:85vw;animation-delay: 4s;}
+.square li:nth-child(4){top:10vh;left:70vw;animation-delay: 6s}
+.square li:nth-child(5){top:10vh;left:10vw;animation-delay: 8s;}
+@keyframes square{0%{transform: scale(0) rotateY(0deg);opacity: 1;}100%{transform: scale(5) rotateY(1000deg);opacity:0;}}
+.circle li{bottom:0;left:15px;animation: circle 6s linear infinite; }
+.circle li:nth-child(2){left: 25vw;animation-delay: 2s;}
+.circle li:nth-child(3){left:50vw;animation-delay: 4s;}
+.circle li:nth-child(4){left:70vw;animation-delay: 6s;}
+.circle li:nth-child(5){left:90vw;animation-delay: 8s;}
+@keyframes circle{0%{transform: scale(0) rotate(0deg);opacity: 1;bottom: 0;border-radius: 0;}100%{transform: scale(2) rotate(1000deg);opacity:0;bottom: 90vh;border-radius: 50%;}}
+body{background-color: orange;animation: bodycolor 5s linear 2s infinite alternate;}
+@keyframes bodycolor{0%{background-color: yellow;}25%{background-color: green;}50%{background-color: blue;}75%{background-color:red;}100%{background-color: deepskyblue;}}
+       </style>
+    </head>
+    <body>
+        <div class="welcome">
+            <h1>Web Animation</h1>
+        </div>
+        <div class="square">
+            <ul>
+                <li></li>
+                <li> </li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>    
+           <div class="circle">
+            <ul>
+                <li></li>
+                <li> </li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>    
+    </body>
+</html>
